@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
     <title>Restaurant Starlight</title>
 </head>
 <body>  
-    <header>
+    <header class="NavigationBar">
         <div class="logo">
             <img src="/images/logo.png" alt="">
         </div>
@@ -22,13 +23,8 @@
                 <li>Menu</li>
             </a><a href="#about">
                 <li>About Us</li>
-            </a><a href="#">
-                <li>Contact</li>
-            </a><a href="#">
-                <li>My Account</li>
-            </a>
-            <a href="#">
-                <li>Reservation</li>
+            </a><a href="#contact">
+                <li>Contact</li>    
             </a>
         </ul>
     </header>
@@ -37,8 +33,8 @@
             <h1>Restaurant Starlight</h1>
             <p>Indulge in exquisite flavors and unforgettable dining experiences,<br> crafted with passion and precision.</p>
             <div class="buttons">
-                <button class="reserve">Reserve now</button>
-                <button class="learn-more">Learn More</button>
+                <a href="#contact"><button class="reserve">Reserve now</button></a>
+                <a href="#about"><button class="learn-more">Learn More</button></a>
             </div>
         </div>
     </section>
@@ -166,9 +162,35 @@
     </section>
     <section class="About-Us" id="about">
             <h1>About Us</h1>
+            <p>Welcome to Restaurant Starlight, where great food meets a warm, inviting atmosphere. Founded on a passion for exceptional cuisine, we are committed to serving delicious, high-quality meals made with the freshest ingredients. Our talented chefs bring their expertise and creativity to every dish, crafting a menu that is both diverse and flavorful.
+
+                At Restaurant Starlight, we believe that dining is more than just a meal – it's an experience. Whether you're here for a casual lunch, a special celebration, or a night out with loved ones, we strive to create an environment that feels like home. Our attentive staff is dedicated to providing top-notch service to ensure that every visit is memorable.
+                
+                We are proud to offer a variety of dishes that cater to all tastes and dietary preferences. From mouthwatering appetizers to indulgent desserts, there’s something for everyone. Join us for a delightful dining experience, and let us share our love for food with you!
+                
+                Thank you for choosing Restaurant Starlight. We look forward to welcoming you soon!</p>
     </section>
+    <section class="Contact" id="contact">
+        <h1>Leave a message: </h1>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button class="form-button" type="submit">Submit</button>
+        </form>
+    </section>
+    <script src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+        <footer>
+        <p>&copy; 2025 Your Website</p>
+    </footer>   
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -193,6 +215,10 @@ $(document).ready(function(){
     } // End if
   });
 });
+
 </script>
+
 </body>
+
+
 </html>
